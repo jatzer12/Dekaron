@@ -5,12 +5,23 @@
   box-sizing: border-box;
 }
 
-/* BASE */
+/* BACKGROUND */
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: radial-gradient(circle at top, #1a1a1a, #000);
   color: #fff;
   min-height: 100vh;
+
+  /* BACKGROUND IMAGE */
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url("./assets/bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 /* HEADER */
@@ -19,20 +30,22 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 20px 40px;
-  background: rgba(0,0,0,0.7);
-  border-bottom: 1px solid #222;
-  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(6px);
 }
 
 .logo {
-  font-size: 20px;
-  font-weight: 800;
+  font-size: 22px;
+  font-weight: 900;
   letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255,180,80,0.4);
 }
 
+/* NAV */
 .nav a {
-  margin: 0 10px;
-  color: #aaa;
+  margin: 0 12px;
+  color: #cfcfcf;
   text-decoration: none;
   font-weight: 500;
 }
@@ -48,18 +61,18 @@ body {
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
-  display: inline-block;
 }
 
 .btn.primary {
-  background: #fff;
+  background: linear-gradient(135deg, #ffb45c, #ff7b00);
   color: #000;
+  box-shadow: 0 0 20px rgba(255,150,50,0.4);
 }
 
 .btn.ghost {
-  border: 1px solid #333;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(0,0,0,0.4);
   color: #fff;
-  background: transparent;
 }
 
 .auth .btn {
@@ -69,18 +82,20 @@ body {
 /* HERO */
 .hero {
   text-align: center;
-  padding: 120px 20px;
+  padding: 140px 20px;
+  background: rgba(0,0,0,0.35);
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: 52px;
   max-width: 900px;
   margin: auto;
+  text-shadow: 0 0 30px rgba(0,0,0,0.8);
 }
 
 .hero p {
-  margin-top: 16px;
-  color: #aaa;
+  margin-top: 18px;
+  color: #d1d1d1;
   font-size: 18px;
 }
 
@@ -95,44 +110,47 @@ body {
 
 /* STATS */
 .stats {
-  margin-top: 60px;
+  margin-top: 70px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px;
-  max-width: 700px;
+  max-width: 720px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .stat {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid #222;
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: 16px;
-  padding: 20px;
+  padding: 22px;
+  backdrop-filter: blur(4px);
 }
 
 .stat strong {
   font-size: 22px;
   display: block;
+  color: #ffb45c;
 }
 
 .stat span {
-  color: #aaa;
+  color: #cfcfcf;
   font-size: 14px;
 }
 
 /* FOOTER */
 .footer {
-  margin-top: 100px;
+  margin-top: 120px;
   padding: 30px;
-  border-top: 1px solid #222;
+  background: rgba(0,0,0,0.7);
+  border-top: 1px solid rgba(255,255,255,0.1);
   text-align: center;
-  color: #777;
+  color: #aaa;
 }
 
 .footer-links a {
   margin: 0 10px;
-  color: #777;
+  color: #aaa;
   text-decoration: none;
 }
 
