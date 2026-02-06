@@ -1,88 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Dekaron – Gaming Portal</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dekaron – Gaming Portal</title>
 
-
-<!-- Styles -->
-<link rel="stylesheet" href="css/styles.css" />
-
-
-<!-- Icons -->
-<link rel="stylesheet" href="https://unpkg.com/lucide-static/font/lucide.css">
+  <!-- IMPORTANT: relative path -->
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 
+  <header class="header">
+    <div class="logo">DEKARON</div>
 
-<header class="site-header">
-<div class="container">
-<div class="logo">
-<img src="assets/images/logo.png" alt="Dekaron Logo" />
-<span>DEKARON</span>
-</div>
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#">News</a>
+      <a href="#">Downloads</a>
+      <a href="#">Rankings</a>
+      <a href="#">Community</a>
+    </nav>
 
+    <div class="auth">
+      <button class="btn ghost">Login</button>
+      <button class="btn primary">Register</button>
+    </div>
+  </header>
 
-<nav class="nav">
-<a href="index.html">Home</a>
-<a href="pages/news.html">News</a>
-<a href="pages/downloads.html">Downloads</a>
-<a href="pages/rankings.html">Rankings</a>
-<a href="pages/community.html">Community</a>
-</nav>
+  <main class="hero">
+    <h1>Your Dekaron hub for patches, guides & PvP</h1>
+    <p>Join the community. Download the client. Climb the rankings.</p>
 
+    <div class="actions">
+      <a class="btn primary" href="#">Download Client</a>
+      <a class="btn ghost" href="#">Latest News</a>
+    </div>
 
-<div class="auth-buttons">
-<button class="btn ghost">Login</button>
-<button class="btn primary">Register</button>
-</div>
-</div>
-</header>
+    <div class="stats">
+      <div class="stat">
+        <strong>99.9%</strong>
+        <span>Uptime</span>
+      </div>
+      <div class="stat">
+        <strong>1,248</strong>
+        <span>Players Online</span>
+      </div>
+      <div class="stat">
+        <strong>Season 12</strong>
+        <span>Current</span>
+      </div>
+    </div>
+  </main>
 
+  <footer class="footer">
+    <p>© 2026 Dekaron Gaming Website – Fan Project</p>
+    <div class="footer-links">
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+      <a href="#">Support</a>
+    </div>
+  </footer>
 
-<section class="hero">
-<div class="container">
-<h1>Your Dekaron hub for patches, guides & PvP</h1>
-<p>Join the community. Download the client. Climb the rankings.</p>
-
-
-<div class="hero-buttons">
-<a href="pages/downloads.html" class="btn primary">Download Client</a>
-<a href="pages/news.html" class="btn ghost">Latest News</a>
-</div>
-
-
-<div class="stats">
-<div class="stat">
-<span class="value">99.9%</span>
-<span class="label">Uptime</span>
-</div>
-<div class="stat">
-<span class="value">1,248</span>
-<span class="label">Players Online</span>
-</div>
-<div class="stat">
-<span class="value">Season 12</span>
-<span class="label">Current</span>
-</div>
-</div>
-</div>
-</section>
-
-
-<footer class="site-footer">
-<div class="container">
-<p>© 2026 Dekaron Gaming Website – Fan Project</p>
-<div class="footer-links">
-<a href="#">Terms</a>
-<a href="#">Privacy</a>
-<a href="#">Support</a>
-</div>
-</div>
-</footer>
-
-
-<script src="js/main.js"></script>
 </body>
 </html>
