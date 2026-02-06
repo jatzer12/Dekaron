@@ -23,6 +23,36 @@ body {
   background-position: center;
   background-attachment: fixed;
 }
+/* BRAND (LOGO + NAME) */
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color:#fff;
+}
+
+.brand-logo{
+  height:38px;         /* change to 44px if you want bigger */
+  width:auto;
+  display:block;
+  filter: drop-shadow(0 0 10px rgba(0,0,0,0.7));
+}
+
+.brand-text{
+  font-size:16px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  opacity:0.95;
+}
+
+/* Mobile: hide text if space is tight */
+@media (max-width: 700px){
+  .brand-text{ display:none; }
+  .header{ padding:16px 18px; }
+}
+
 
 /* HEADER */
 .header {
