@@ -3,67 +3,138 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dekaron – Gaming Portal</title>
-
-  <!-- IMPORTANT: relative path -->
+  <title>Dekaron Reloaded</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
-<body>
 
+<body>
   <header class="header">
     <a class="brand" href="./">
-  <img class="brand-logo" src="./assets/logo.png" alt="Dekaron Legends Logo">
-  <span class="brand-text">DEKARON LEGENDS</span>
-</a>
-
+      <!-- If you have a logo, keep this. If not, delete the img line -->
+      <img class="brand-logo" src="./assets/logo.png" alt="Dekaron Reloaded Logo">
+      <span class="brand-text">DEKARON RELOADED</span>
+    </a>
 
     <nav class="nav">
-      <a href="#">Home</a>
-      <a href="#">News</a>
-      <a href="#">Downloads</a>
-      <a href="#">Rankings</a>
-      <a href="#">Community</a>
+      <a href="#rates">Server Rates</a>
+      <a href="#discord">Discord</a>
+      <a href="#download">Download</a>
     </nav>
-
-    <div class="auth">
-      <button class="btn ghost">Login</button>
-      <button class="btn primary">Register</button>
-    </div>
   </header>
 
-  <main class="hero">
-    <h1>Your Dekaron hub for patches, guides & PvP</h1>
-    <p>Join the community. Download the client. Climb the rankings.</p>
+  <main class="wrap">
+    <section class="hero">
+      <h1>Dekaron Reloaded</h1>
+      <p>Simple. Fast. Competitive. Join the community and start playing in minutes.</p>
 
-    <div class="actions">
-      <a class="btn primary" href="#">Download Client</a>
-      <a class="btn ghost" href="#">Latest News</a>
-    </div>
+      <div class="hero-actions">
+        <a class="btn primary" href="#download">Download</a>
+        <a class="btn ghost" href="#discord">Join Discord</a>
+      </div>
+    </section>
 
-    <div class="stats">
-      <div class="stat">
-        <strong>99.9%</strong>
-        <span>Uptime</span>
+    <section id="rates" class="section">
+      <div class="section-head">
+        <h2>Server Rates</h2>
+        <p>Quick overview of rates and gameplay settings.</p>
       </div>
-      <div class="stat">
-        <strong>1,248</strong>
-        <span>Players Online</span>
+
+      <div class="cards">
+        <div class="card">
+          <div class="card-title">EXP Rate</div>
+          <div class="card-value">x50</div>
+          <div class="card-sub">Level faster, get into PvP sooner</div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Drop Rate</div>
+          <div class="card-value">x30</div>
+          <div class="card-sub">Better drops without killing the grind</div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">DIL Rate</div>
+          <div class="card-value">x20</div>
+          <div class="card-sub">Healthy economy & smoother progression</div>
+        </div>
       </div>
-      <div class="stat">
-        <strong>Season 12</strong>
-        <span>Current</span>
+
+      <div class="note">
+        Edit these values anytime in <code>index.html</code> (search “Server Rates”).
       </div>
-    </div>
+    </section>
+
+    <section id="discord" class="section">
+      <div class="section-head">
+        <h2>Discord</h2>
+        <p>Announcements, support, events, and guild recruiting.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card card-pad">
+          <h3 class="mini-title">Join the Community</h3>
+          <p class="muted">
+            Click below to join Discord. If you enable the Discord Server Widget, it will show members + channels here.
+          </p>
+
+          <!-- Replace YOUR_INVITE_CODE with your real invite -->
+          <a class="btn primary full" href="https://discord.gg/YOUR_INVITE_CODE" target="_blank" rel="noreferrer">
+            Open Discord Invite
+          </a>
+
+          <div class="small muted">
+            Tip: In Discord → Server Settings → Widget → Enable Widget → copy “Server ID”.
+          </div>
+        </div>
+
+        <div class="card discord-card">
+          <!-- Discord Widget Iframe -->
+          <!-- Replace YOUR_SERVER_ID with your server id number -->
+          <iframe
+            class="discord-iframe"
+            src="https://discord.com/widget?id=YOUR_SERVER_ID&theme=dark"
+            width="100%"
+            height="420"
+            allowtransparency="true"
+            frameborder="0"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+            title="Discord Widget"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="section">
+      <div class="section-head">
+        <h2>Download</h2>
+        <p>Get the client and start playing.</p>
+      </div>
+
+      <div class="download">
+        <div class="download-left">
+          <div class="download-title">Dekaron Reloaded Client</div>
+          <div class="muted">Launcher recommended for easier updates.</div>
+        </div>
+
+        <!-- Replace with your real download link -->
+        <a class="btn primary" href="https://example.com/your-client-download.zip" target="_blank" rel="noreferrer">
+          Download Client
+        </a>
+      </div>
+
+      <div class="note">
+        Optional: add mirrors (Google Drive / Mega) or a checksum (MD5/SHA256) for trust.
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© 2026 Dekaron Reloaded</div>
+      <div class="footer-links">
+        <a href="#rates">Rates</a>
+        <a href="#discord">Discord</a>
+        <a href="#download">Download</a>
+      </div>
+    </footer>
   </main>
-
-  <footer class="footer">
-    <p>© 2026 Dekaron Gaming Website – Fan Project</p>
-    <div class="footer-links">
-      <a href="#">Terms</a>
-      <a href="#">Privacy</a>
-      <a href="#">Support</a>
-    </div>
-  </footer>
-
 </body>
 </html>
