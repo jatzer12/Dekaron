@@ -24,8 +24,6 @@
   </header>
 
   <main class="wrap">
-
-    <!-- HERO -->
     <section class="hero">
       <h1>Dekaron Reloaded</h1>
       <p>Simple. Fast. Competitive. Join the community and start playing in minutes.</p>
@@ -36,7 +34,6 @@
       </div>
     </section>
 
-    <!-- SERVER INFO -->
     <section id="rates" class="section">
       <div class="section-head">
         <h2>Server Info</h2>
@@ -64,7 +61,6 @@
       </div>
     </section>
 
-    <!-- HIGHLIGHTS -->
     <section id="highlights" class="section">
       <div class="section-head">
         <h2>Highlights</h2>
@@ -72,7 +68,6 @@
       </div>
 
       <div class="highlights">
-
         <!-- Weekly Battle Cup -->
         <div class="card card-pad">
           <div class="badge">Weekly</div>
@@ -81,14 +76,12 @@
             Every <strong>Saturday</strong> at <strong>6:00 PM</strong>. Team vs Team tournament with bracket format.
           </p>
 
-          <!-- ✅ BRACKET PREVIEW RESTORED -->
           <div class="bracket">
             <div class="bracket-head">
               <span class="bracket-title">Bracket Preview</span>
             </div>
 
             <div class="bracket-grid bracket-6">
-
               <!-- PLAYOFF -->
               <div class="round">
                 <div class="round-title">Playoff</div>
@@ -98,28 +91,28 @@
                 <div class="match">Team D</div>
               </div>
 
-              <!-- LOWER BRACKET -->
+              <!-- LOWER BRACKET (Loser vs Loser) -->
               <div class="round">
                 <div class="round-title">Lower Bracket</div>
                 <div class="match">Loser (A vs B)</div>
                 <div class="match">Loser (C vs D)</div>
               </div>
 
-              <!-- WINNER BRACKET -->
+              <!-- WINNER BRACKET (Winner vs Winner) -->
               <div class="round">
                 <div class="round-title">Winner Bracket</div>
                 <div class="match win">Winner (A vs B)</div>
                 <div class="match win">Winner (C vs D)</div>
               </div>
 
-              <!-- SEMI FINALS -->
+              <!-- SEMI FINALS (LB Winner vs WB Loser) -->
               <div class="round">
                 <div class="round-title">Semi Finals</div>
                 <div class="match win">Winner (Lower Bracket)</div>
                 <div class="match">Loser (Winner Bracket)</div>
               </div>
 
-              <!-- FINALS -->
+              <!-- FINALS (WB Winner vs Semi Winner) -->
               <div class="round">
                 <div class="round-title">Finals</div>
                 <div class="match champ">Winner (Winner Bracket)</div>
@@ -131,7 +124,6 @@
                 <div class="round-title">Champion</div>
                 <div class="match champ">Grand Champion</div>
               </div>
-
             </div>
           </div>
         </div>
@@ -180,7 +172,6 @@
             Get notified on Discord
           </a>
         </div>
-
       </div>
     </section>
 
@@ -216,7 +207,6 @@
       </div>
     </section>
 
-    <!-- DOWNLOAD -->
     <section id="download" class="section">
       <div class="section-head">
         <h2>Download</h2>
@@ -235,7 +225,7 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER (Facebook added here) -->
     <footer class="footer">
       <div>© 2026 Dekaron Reloaded</div>
 
@@ -252,10 +242,9 @@
         <a href="#download">Download</a>
       </div>
     </footer>
-
   </main>
 
-  <!-- Connect bracket.json -> website (optional/live area) -->
+  <!-- Connect bracket.json -> website (fixed so it won't break) -->
   <script>
     async function loadBracket() {
       const container = document.getElementById("bracket-container");
