@@ -76,14 +76,14 @@
             Every <strong>Saturday</strong> at <strong>6:00 PM</strong>. Team vs Team tournament with bracket format.
           </p>
 
-        <div class="bracket">
+ <div class="bracket">
   <div class="bracket-head">
     <span class="bracket-title">Bracket Preview</span>
   </div>
 
-  <div class="bracket-grid">
+  <div class="bracket-grid bracket-6">
 
-    <!-- PLAYOFF (Round 1) -->
+    <!-- PLAYOFF -->
     <div class="round">
       <div class="round-title">Playoff</div>
       <div class="match">Team A</div>
@@ -92,25 +92,32 @@
       <div class="match">Team D</div>
     </div>
 
-    <!-- LOWER BRACKET ROUND -->
+    <!-- LOWER BRACKET (Loser vs Loser) -->
     <div class="round">
       <div class="round-title">Lower Bracket</div>
-      <div class="match">Loser 1 (Playoff 1)</div>
-      <div class="match">Loser 2 (Playoff 2)</div>
+      <div class="match">Loser (A vs B)</div>
+      <div class="match">Loser (C vs D)</div>
     </div>
 
-    <!-- WINNERS BRACKET (Semi Finals) -->
+    <!-- WINNER BRACKET (Winner vs Winner) -->
     <div class="round">
-      <div class="round-title">Winners Bracket</div>
-      <div class="match win">Winner 1 (Playoff 1)</div>
-      <div class="match win">Winner 2 (Playoff 2)</div>
+      <div class="round-title">Winner Bracket</div>
+      <div class="match win">Winner (A vs B)</div>
+      <div class="match win">Winner (C vs D)</div>
     </div>
 
-    <!-- FINALS -->
+    <!-- SEMI FINALS (LB Winner vs WB Loser) -->
+    <div class="round">
+      <div class="round-title">Semi Finals</div>
+      <div class="match win">Winner (Lower Bracket)</div>
+      <div class="match">Loser (Winner Bracket)</div>
+    </div>
+
+    <!-- FINALS (WB Winner vs Semi Winner) -->
     <div class="round">
       <div class="round-title">Finals</div>
-      <div class="match win">Winner (Lower Bracket)</div>
-      <div class="match win">Loser (Winners Bracket)</div>
+      <div class="match champ">Winner (Winner Bracket)</div>
+      <div class="match win">Winner (Semi Finals)</div>
     </div>
 
     <!-- CHAMPION -->
@@ -121,7 +128,6 @@
 
   </div>
 </div>
-
         </div>
 
         <!-- Random Events -->
