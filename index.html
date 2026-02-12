@@ -76,38 +76,52 @@
             Every <strong>Saturday</strong> at <strong>6:00 PM</strong>. Team vs Team tournament with bracket format.
           </p>
 
-          <div class="info-row">
-            <div class="info-pill">Schedule: Saturday 6PM</div>
-            <div class="info-pill">Format: 5v5 or 7v7</div>
-            <div class="info-pill">Prize: Cash</div>
-          </div>
+        <div class="bracket">
+  <div class="bracket-head">
+    <span class="bracket-title">Bracket Preview</span>
+  </div>
 
-          <div class="bracket">
-            <div class="bracket-head">
-              <span class="bracket-title">Bracket Preview</span>
-            </div>
+  <div class="bracket-grid">
 
-            <div class="bracket-grid">
-              <div class="round">
-                <div class="round-title">Round 1</div>
-                <div class="match">Team A</div>
-                <div class="match">Team B</div>
-                <div class="match">Team C</div>
-                <div class="match">Team D</div>
-              </div>
+    <!-- PLAYOFF (Round 1) -->
+    <div class="round">
+      <div class="round-title">Playoff</div>
+      <div class="match">Team A</div>
+      <div class="match">Team B</div>
+      <div class="match">Team C</div>
+      <div class="match">Team D</div>
+    </div>
 
-              <div class="round">
-                <div class="round-title">Round 2</div>
-                <div class="match win">Winner 1</div>
-                <div class="match win">Winner 2</div>
-              </div>
+    <!-- LOWER BRACKET ROUND -->
+    <div class="round">
+      <div class="round-title">Lower Bracket</div>
+      <div class="match">Loser 1 (Playoff 1)</div>
+      <div class="match">Loser 2 (Playoff 2)</div>
+    </div>
 
-              <div class="round">
-                <div class="round-title">Final</div>
-                <div class="match champ">Champion</div>
-              </div>
-            </div>
-          </div>
+    <!-- WINNERS BRACKET (Semi Finals) -->
+    <div class="round">
+      <div class="round-title">Winners Bracket</div>
+      <div class="match win">Winner 1 (Playoff 1)</div>
+      <div class="match win">Winner 2 (Playoff 2)</div>
+    </div>
+
+    <!-- FINALS -->
+    <div class="round">
+      <div class="round-title">Finals</div>
+      <div class="match win">Winner (Lower Bracket)</div>
+      <div class="match win">Loser (Winners Bracket)</div>
+    </div>
+
+    <!-- CHAMPION -->
+    <div class="round">
+      <div class="round-title">Champion</div>
+      <div class="match champ">Grand Champion</div>
+    </div>
+
+  </div>
+</div>
+
         </div>
 
         <!-- Random Events -->
