@@ -7,10 +7,10 @@
     "updated_at": "2026-01-01T00:00:00Z"
   },
   "teams": [
-    { "id": "A", "name": "Team A" },
-    { "id": "B", "name": "Team B" },
-    { "id": "C", "name": "Team C" },
-    { "id": "D", "name": "Team D" }
+    { "id": "A", "name": "Pani" },
+    { "id": "B", "name": "Jim" },
+    { "id": "C", "name": "Bince" },
+    { "id": "D", "name": "Ephraim" }
   ],
   "matches": [
     {
