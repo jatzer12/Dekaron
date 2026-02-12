@@ -72,14 +72,71 @@
       </div>
 
       <div class="highlights">
+
+        <!-- Weekly Battle Cup -->
         <div class="card card-pad">
           <div class="badge">Weekly</div>
           <h3 class="highlight-title">Battle Cup — Cash Prizes</h3>
           <p class="muted">
             Every <strong>Saturday</strong> at <strong>6:00 PM</strong>. Team vs Team tournament with bracket format.
           </p>
+
+          <!-- ✅ BRACKET PREVIEW RESTORED -->
+          <div class="bracket">
+            <div class="bracket-head">
+              <span class="bracket-title">Bracket Preview</span>
+            </div>
+
+            <div class="bracket-grid bracket-6">
+
+              <!-- PLAYOFF -->
+              <div class="round">
+                <div class="round-title">Playoff</div>
+                <div class="match">Team A</div>
+                <div class="match">Team B</div>
+                <div class="match">Team C</div>
+                <div class="match">Team D</div>
+              </div>
+
+              <!-- LOWER BRACKET -->
+              <div class="round">
+                <div class="round-title">Lower Bracket</div>
+                <div class="match">Loser (A vs B)</div>
+                <div class="match">Loser (C vs D)</div>
+              </div>
+
+              <!-- WINNER BRACKET -->
+              <div class="round">
+                <div class="round-title">Winner Bracket</div>
+                <div class="match win">Winner (A vs B)</div>
+                <div class="match win">Winner (C vs D)</div>
+              </div>
+
+              <!-- SEMI FINALS -->
+              <div class="round">
+                <div class="round-title">Semi Finals</div>
+                <div class="match win">Winner (Lower Bracket)</div>
+                <div class="match">Loser (Winner Bracket)</div>
+              </div>
+
+              <!-- FINALS -->
+              <div class="round">
+                <div class="round-title">Finals</div>
+                <div class="match champ">Winner (Winner Bracket)</div>
+                <div class="match win">Winner (Semi Finals)</div>
+              </div>
+
+              <!-- CHAMPION -->
+              <div class="round">
+                <div class="round-title">Champion</div>
+                <div class="match champ">Grand Champion</div>
+              </div>
+
+            </div>
+          </div>
         </div>
 
+        <!-- Random Events -->
         <div class="card card-pad">
           <div class="badge alt">Random</div>
           <h3 class="highlight-title">Random Events — Cash Prizes</h3>
@@ -87,10 +144,43 @@
             Surprise events held at <strong>random times</strong> during the week — keep an eye on Discord announcements.
           </p>
 
-          <a class="btn ghost full" href="https://discord.gg/JSeXP3VAmw" target="_blank">
+          <div class="info-row">
+            <div class="info-pill">Schedule: Random</div>
+            <div class="info-pill">Types: PvP / PvE / Mini-games</div>
+            <div class="info-pill">Prize: Cash</div>
+          </div>
+
+          <div class="event-list">
+            <div class="event-item">
+              <span class="event-dot"></span>
+              <div>
+                <div class="event-title">Flash PvP Arena</div>
+                <div class="muted small">Quick brackets or last-team-standing</div>
+              </div>
+            </div>
+
+            <div class="event-item">
+              <span class="event-dot"></span>
+              <div>
+                <div class="event-title">Boss Hunt</div>
+                <div class="muted small">First party to clear wins</div>
+              </div>
+            </div>
+
+            <div class="event-item">
+              <span class="event-dot"></span>
+              <div>
+                <div class="event-title">Hide & Seek / Trivia</div>
+                <div class="muted small">Fun community events with prizes</div>
+              </div>
+            </div>
+          </div>
+
+          <a class="btn ghost full" href="https://discord.gg/JSeXP3VAmw" target="_blank" rel="noreferrer">
             Get notified on Discord
           </a>
         </div>
+
       </div>
     </section>
 
@@ -106,7 +196,7 @@
           <h3 class="mini-title">Join the Community</h3>
           <p class="muted">Join Discord for announcements, support, events, and updates.</p>
 
-          <a class="btn primary full" href="https://discord.gg/JSeXP3VAmw" target="_blank">
+          <a class="btn primary full" href="https://discord.gg/JSeXP3VAmw" target="_blank" rel="noreferrer">
             Open Discord Invite
           </a>
         </div>
@@ -120,8 +210,8 @@
             allowtransparency="true"
             frameborder="0"
             sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-            title="Discord Widget">
-          </iframe>
+            title="Discord Widget"
+          ></iframe>
         </div>
       </div>
     </section>
@@ -134,12 +224,12 @@
       </div>
 
       <div class="download">
-        <div>
+        <div class="download-left">
           <div class="download-title">Dekaron Reloaded Client</div>
           <div class="muted">Launcher recommended for easier updates.</div>
         </div>
 
-        <a class="btn primary" href="https://example.com/your-client-download.zip" target="_blank">
+        <a class="btn primary" href="https://example.com/your-client-download.zip" target="_blank" rel="noreferrer">
           Download Client
         </a>
       </div>
@@ -149,9 +239,8 @@
     <footer class="footer">
       <div>© 2026 Dekaron Reloaded</div>
 
-      <!-- FACEBOOK LOGO -->
       <div class="footer-center">
-        <a href="https://www.facebook.com/gaming/reloaded808" target="_blank" class="footer-social">
+        <a href="https://www.facebook.com/gaming/reloaded808" target="_blank" rel="noopener" class="footer-social">
           <img src="./assets/facebook-icon.png" alt="Facebook">
         </a>
       </div>
@@ -165,5 +254,51 @@
     </footer>
 
   </main>
+
+  <!-- Connect bracket.json -> website (optional/live area) -->
+  <script>
+    async function loadBracket() {
+      const container = document.getElementById("bracket-container");
+      if (!container) return;
+
+      try {
+        const res = await fetch("./bracket.json", { cache: "no-store" });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+
+        const data = await res.json();
+
+        const teams = {};
+        (data.teams || []).forEach(t => { teams[t.id] = t.name; });
+
+        const matches = data.matches || [];
+        if (!matches.length) {
+          container.innerHTML = "No bracket data found.";
+          return;
+        }
+
+        const html = matches.map(m => {
+          const t1 = m.team1 ? (teams[m.team1] || m.team1) : "TBD";
+          const t2 = m.team2 ? (teams[m.team2] || m.team2) : "TBD";
+          const s1 = m.score?.team1 ?? 0;
+          const s2 = m.score?.team2 ?? 0;
+
+          return `
+            <div class="match-card">
+              <div class="match-label">${m.label || m.id}</div>
+              <div class="match-row">${t1} <span>${s1}</span></div>
+              <div class="match-row">${t2} <span>${s2}</span></div>
+            </div>
+          `;
+        }).join("");
+
+        container.innerHTML = html;
+
+      } catch (e) {
+        container.innerHTML = "Failed to load bracket.json. Make sure it is in the repo root.";
+      }
+    }
+
+    loadBracket();
+  </script>
 </body>
 </html>
