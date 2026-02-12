@@ -180,7 +180,7 @@ body{
 }
 
 .discord-card{ overflow:hidden; }
-.discord-iframe{ display:block; border:0; }
+.discord-iframe{ display:block; border:0; width: 100%; }
 
 /* Download row */
 .download{
@@ -380,6 +380,38 @@ body{
   background: rgba(255,180,90,0.16);
   border-color: rgba(255,180,90,0.35);
   color: rgba(255,220,170,0.98);
+}
+
+/* LIVE BRACKET (from bracket.json) */
+.bracket-live{
+  margin-top: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.match-card{
+  background: rgba(0,0,0,0.50);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.match-label{
+  font-size: 13px;
+  font-weight: 900;
+  margin-bottom: 8px;
+  color: var(--accent1);
+}
+
+.match-row{
+  display:flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-weight: 800;
+}
+
+.match-row span{
+  color: var(--accent2);
 }
 
 /* RANDOM EVENTS LIST */
