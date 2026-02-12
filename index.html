@@ -21,12 +21,17 @@
       <a href="#discord">Discord</a>
       <a href="#download">Download</a>
     </nav>
+
+    <!-- Social moved OUT of <head> and into header -->
+    <a class="header-social" href="https://www.facebook.com/gaming/reloaded808" target="_blank" rel="noreferrer">
+      <img src="assets/facebook-icon.png" alt="Facebook">
+    </a>
   </header>
 
   <main class="wrap">
     <section class="hero">
       <h1>Dekaron Reloaded</h1>
-      <p>Action-packed PvP & PvE. Weekly events. Cash prize tournaments.</p>
+      <p>Simple. Fast. Competitive. Join the community and start playing in minutes.</p>
 
       <div class="hero-actions">
         <a class="btn primary" href="#download">Download</a>
@@ -34,198 +39,210 @@
       </div>
     </section>
 
-    <!-- SERVER INFO -->
-    <section class="section" id="rates">
+    <!-- Server Info -->
+    <section id="rates" class="section">
       <div class="section-head">
         <h2>Server Info</h2>
-        <p>Fast leveling, balanced PvP, and active events.</p>
+        <p>Simple server details before you download and jump in.</p>
       </div>
 
       <div class="cards">
         <div class="card">
-          <div class="card-title">EXP Rate</div>
-          <div class="card-value">x500</div>
-          <div class="card-sub">Quick progression</div>
+          <div class="card-title">Max Level</div>
+          <div class="card-value">200</div>
+          <div class="card-sub">New characters start at max level automatically</div>
         </div>
 
         <div class="card">
-          <div class="card-title">Drop Rate</div>
-          <div class="card-value">x50</div>
-          <div class="card-sub">More loot, less grind</div>
+          <div class="card-title">Starter Gear</div>
+          <div class="card-value">Lv 130 +9</div>
+          <div class="card-sub">Starter items included when you create your character</div>
         </div>
 
         <div class="card">
-          <div class="card-title">Classes</div>
-          <div class="card-value">11</div>
-          <div class="card-sub">Action 9 client</div>
+          <div class="card-title">Server Style</div>
+          <div class="card-value">Semi PvP</div>
+          <div class="card-sub">Semi PvP, semi grind — balanced progression & action</div>
         </div>
       </div>
     </section>
 
-    <!-- HIGHLIGHTS (OLD LOOK) -->
-    <section class="section" id="highlights">
+    <!-- Highlights -->
+    <section id="highlights" class="section">
       <div class="section-head">
         <h2>Highlights</h2>
         <p>Cash prize events and weekly competitive play.</p>
       </div>
 
-      <div class="highlights-grid">
-        <!-- LEFT PANEL -->
-        <div class="h-panel">
-          <div class="h-top">
-            <span class="chip chip-warn">Weekly</span>
-          </div>
-
-          <h3 class="h-title">Battle Cup — Cash Prizes</h3>
-          <p class="h-desc">
-            Every <b>Saturday</b> at <b>6:00 PM</b>. Team vs Team tournament with bracket format.
+      <div class="highlights">
+        <!-- Weekly Battle Cup -->
+        <div class="card card-pad">
+          <div class="badge">Weekly</div>
+          <h3 class="highlight-title">Battle Cup — Cash Prizes</h3>
+          <p class="muted">
+            Every <strong>Saturday</strong> at <strong>6:00 PM</strong>. Team vs Team tournament with bracket format.
           </p>
 
-          <div class="bracket-box">
+          <div class="bracket">
             <div class="bracket-head">
               <span class="bracket-title">Bracket Preview</span>
             </div>
 
-            <div class="bracket-layout">
-              <div class="bracket-col">
-                <div class="bracket-col-title">Playoff</div>
-                <div class="bracket-item">Team A</div>
-                <div class="bracket-item">Team B</div>
-                <div class="bracket-item">Team C</div>
-                <div class="bracket-item">Team D</div>
+            <div class="bracket-grid bracket-6">
+              <!-- PLAYOFF -->
+              <div class="round">
+                <div class="round-title">Playoff</div>
+                <div class="match">Team A</div>
+                <div class="match">Team B</div>
+                <div class="match">Team C</div>
+                <div class="match">Team D</div>
               </div>
 
-              <div class="bracket-col">
-                <div class="bracket-col-title">Lower Bracket</div>
-                <div class="bracket-item">Loser (A vs B)</div>
-                <div class="bracket-item">Loser (C vs D)</div>
+              <!-- LOWER BRACKET -->
+              <div class="round">
+                <div class="round-title">Lower Bracket</div>
+                <div class="match">Loser (A vs B)</div>
+                <div class="match">Loser (C vs D)</div>
               </div>
 
-              <div class="bracket-col">
-                <div class="bracket-col-title">Winner Bracket</div>
-                <div class="bracket-item is-accent">Winner (A vs B)</div>
-                <div class="bracket-item is-accent">Winner (C vs D)</div>
+              <!-- WINNER BRACKET -->
+              <div class="round">
+                <div class="round-title">Winner Bracket</div>
+                <div class="match win">Winner (A vs B)</div>
+                <div class="match win">Winner (C vs D)</div>
               </div>
 
-              <div class="bracket-row-2">
-                <div class="bracket-col">
-                  <div class="bracket-col-title">Semi Finals</div>
-                  <div class="bracket-item is-accent">Winner (Lower Bracket)</div>
-                  <div class="bracket-item">Loser (Winner Bracket)</div>
-                </div>
+              <!-- SEMI FINALS -->
+              <div class="round">
+                <div class="round-title">Semi Finals</div>
+                <div class="match win">Winner (Lower Bracket)</div>
+                <div class="match">Loser (Winner Bracket)</div>
+              </div>
 
-                <div class="bracket-col">
-                  <div class="bracket-col-title">Finals</div>
-                  <div class="bracket-item is-accent">Winner (Winner Bracket)</div>
-                  <div class="bracket-item">Winner (Semi Finals)</div>
-                </div>
+              <!-- FINALS -->
+              <div class="round">
+                <div class="round-title">Finals</div>
+                <div class="match champ">Winner (Winner Bracket)</div>
+                <div class="match win">Winner (Semi Finals)</div>
+              </div>
 
-                <div class="bracket-col">
-                  <div class="bracket-col-title">Champion</div>
-                  <div class="bracket-item is-gold">Grand Champion</div>
-                </div>
+              <!-- CHAMPION -->
+              <div class="round">
+                <div class="round-title">Champion</div>
+                <div class="match champ">Grand Champion</div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- RIGHT PANEL -->
-        <div class="h-panel">
-          <div class="h-top">
-            <span class="chip chip-info">Random</span>
-          </div>
+        <!-- Random Events -->
+        <div class="card card-pad">
+          <div class="badge alt">Random</div>
+          <h3 class="highlight-title">Random Events — Cash Prizes</h3>
 
-          <h3 class="h-title">Random Events — Cash Prizes</h3>
-          <p class="h-desc">
-            Surprise events held at <b>random times</b> during the week — keep an eye on <b>Discord</b> announcements.
+          <p class="muted">
+            Surprise events held at <strong>random times</strong> during the week — keep an eye on Discord announcements.
           </p>
 
-          <div class="pill-row">
-            <span class="pill">Schedule: <b>Random</b></span>
-            <span class="pill">Types: <b>PvP / PvE / Mini-games</b></span>
-            <span class="pill">Prize: <b>Cash</b></span>
+          <div class="info-row">
+            <div class="info-pill">Schedule: Random</div>
+            <div class="info-pill">Types: PvP / PvE / Mini-games</div>
+            <div class="info-pill">Prize: Cash</div>
           </div>
 
           <div class="event-list">
             <div class="event-item">
-              <div class="event-dot"></div>
-              <div class="event-body">
-                <div class="event-name">Flash PvP Arena</div>
-                <div class="event-sub">Quick brackets or last-team-standing</div>
+              <span class="event-dot"></span>
+              <div>
+                <div class="event-title">Flash PvP Arena</div>
+                <div class="muted small">Quick brackets or last-team-standing</div>
               </div>
             </div>
 
             <div class="event-item">
-              <div class="event-dot"></div>
-              <div class="event-body">
-                <div class="event-name">Boss Hunt</div>
-                <div class="event-sub">First party to clear wins</div>
+              <span class="event-dot"></span>
+              <div>
+                <div class="event-title">Boss Hunt</div>
+                <div class="muted small">First party to clear wins</div>
               </div>
             </div>
 
             <div class="event-item">
-              <div class="event-dot"></div>
-              <div class="event-body">
-                <div class="event-name">Hide &amp; Seek / Trivia</div>
-                <div class="event-sub">Fun community events with prizes</div>
+              <span class="event-dot"></span>
+              <div>
+                <div class="event-title">Hide &amp; Seek / Trivia</div>
+                <div class="muted small">Fun community events with prizes</div>
               </div>
             </div>
           </div>
 
-          <a class="btn ghost full" href="#discord">Get notified on Discord</a>
+          <a class="btn ghost full" href="https://discord.gg/JSeXP3VAmw" target="_blank" rel="noreferrer">
+            Get notified on Discord
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- DISCORD + DOWNLOAD -->
-    <section class="section" id="discord">
+    <!-- Discord -->
+    <section id="discord" class="section">
       <div class="section-head">
-        <h2>Community</h2>
-        <p>Join Discord for announcements, events, and support.</p>
+        <h2>Discord</h2>
+        <p>Announcements, support, events, and guild recruiting.</p>
       </div>
 
       <div class="grid-2">
         <div class="card card-pad">
-          <div class="mini-title">Discord</div>
-          <p class="muted small">Use the widget below to join instantly.</p>
+          <h3 class="mini-title">Join the Community</h3>
+          <p class="muted">Join Discord for announcements, support, events, and updates.</p>
+
+          <a class="btn primary full" href="https://discord.gg/JSeXP3VAmw" target="_blank" rel="noreferrer">
+            Open Discord Invite
+          </a>
         </div>
 
         <div class="card discord-card">
-          <iframe class="discord-iframe" height="320"
+          <iframe
+            class="discord-iframe"
             src="https://discord.com/widget?id=1470798141011001505&theme=dark"
-            allowtransparency="true" frameborder="0"
-            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            width="100%"
+            height="420"
+            allowtransparency="true"
+            frameborder="0"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+            title="Discord Widget"
+          ></iframe>
         </div>
       </div>
     </section>
 
-    <section class="section" id="download">
+    <!-- Download -->
+    <section id="download" class="section">
       <div class="section-head">
         <h2>Download</h2>
         <p>Get the client and start playing.</p>
       </div>
 
       <div class="download">
-        <div>
+        <div class="download-left">
           <div class="download-title">Dekaron Reloaded Client</div>
-          <div class="muted small">Windows • Action 9 • 11 Classes</div>
+          <div class="muted">Launcher recommended for easier updates.</div>
         </div>
-        <a class="btn primary" href="#">Download</a>
+
+        <a class="btn primary" href="https://example.com/your-client-download.zip" target="_blank" rel="noreferrer">
+          Download Client
+        </a>
       </div>
     </section>
 
     <footer class="footer">
-      <div class="footer-center">© <span id="year"></span> Dekaron Reloaded</div>
+      <div>© <span id="year"></span> Dekaron Reloaded</div>
 
       <div class="footer-links">
         <a href="#rates">Server Info</a>
+        <a href="#highlights">Highlights</a>
         <a href="#discord">Discord</a>
         <a href="#download">Download</a>
       </div>
-
-      <a class="footer-social" href="https://www.facebook.com/gaming/reloaded808" target="_blank" rel="noopener">
-        <img src="assets/facebook-icon.png" alt="Facebook">
-      </a>
     </footer>
   </main>
 
