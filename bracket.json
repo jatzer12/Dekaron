@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "title": "Battle Cup Bracket",
+    "timezone": "Local",
+    "starts_at": "Saturday 6:00 PM",
+    "format_note": "4-Team Double Elimination",
+    "updated_at": "2026-01-01T00:00:00Z"
+  },
+  "teams": [
+    { "id": "A", "name": "Team A" },
+    { "id": "B", "name": "Team B" },
+    { "id": "C", "name": "Team C" },
+    { "id": "D", "name": "Team D" }
+  ],
+  "matches": [
+    {
+      "id": "WB1",
+      "bracket": "winners",
+      "round": 1,
+      "label": "Winners R1 - Match 1",
+      "team1": "A",
+      "team2": "B",
+      "best_of": 3,
+      "score": { "team1": 0, "team2": 0 },
+      "winner": null,
+      "loser": null,
+      "next": { "winner_to": "WB3", "loser_to": "LB1" }
+    },
+    {
+      "id": "WB2",
+      "bracket": "winners",
+      "round": 1,
+      "label": "Winners R1 - Match 2",
+      "team1": "C",
+      "team2": "D",
+      "best_of": 3,
+      "score": { "team1": 0, "team2": 0 },
+      "winner": null,
+      "loser": null,
+      "next": { "winner_to": "WB3", "loser_to": "LB1" }
+    },
+    {
+      "id": "LB1",
+      "bracket": "losers",
+      "round": 1,
+      "label": "Losers R1",
+      "team1": null,
+      "team2": null,
+      "best_of": 3,
+      "score": { "team1": 0, "team2": 0 },
+      "winner": null,
+      "loser": null,
+      "sources": { "team1_from": "WB1.loser", "team2_from": "WB2.loser" },
+      "next": { "winner_to": "LB2", "loser_to": null }
+    },
+    {
+      "id": "WB3",
+      "bracket": "winners",
+      "round": 2,
+      "label": "Winners Final",
+      "team1": null,
+      "team2": null,
+      "best_of": 5,
+      "score": { "team1": 0, "team2": 0 },
+      "winner": null,
+      "loser": null,
+      "sources": { "team1_from": "WB1.winner", "team2_from": "WB2.winner" },
+      "next": { "winner_to": "GF", "loser_to": "LB2" }
+    },
+    {
+      "id": "LB2",
+      "bracket": "losers",
+      "round": 2,
+      "label": "Losers Final",
+      "team1": null,
+      "team2": null,
+      "best_of": 5,
+      "score": { "team1": 0, "team2": 0 },
+      "winner": null,
+      "loser": null,
+      "sources": { "team1_from": "LB1.winner", "team2_from": "WB3.loser" },
+      "next": { "winner_to": "GF", "loser_to": null }
+    },
+    {
+      "id": "GF",
+      "bracket": "grand_final",
+      "round": 3,
+      "label": "Grand Final",
+      "team1": null,
+      "team2": null,
+      "best_of": 5,
+      "score": { "team1": 0, "team2": 0 },
+      "winner": null,
+      "loser": null,
+      "sources": { "team1_from": "WB3.winner", "team2_from": "LB2.winner" },
+      "champion": true
+    }
+  ]
+}
