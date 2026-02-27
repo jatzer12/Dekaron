@@ -322,16 +322,17 @@ h3 {
 
 .bracket-board {
   position: relative;
-  min-width: 980px;
-  height: 380px;
+  min-width: 930px;
+  height: 360px;
 }
 
 .bracket-lines {
   position: absolute;
   inset: 0;
-  width: 980px;
-  height: 380px;
+  width: 930px;
+  height: 360px;
   pointer-events: none;
+  z-index: 1;
 }
 
 .bracket-lines polyline {
@@ -355,12 +356,13 @@ h3 {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.08);
   text-transform: none;
+  z-index: 3;
 }
 
-.qf { left: 20px; top: 18px; width: 170px; }
-.sf { left: 290px; top: 18px; width: 170px; }
-.final { left: 560px; top: 18px; width: 170px; }
-.champion { left: 790px; top: 18px; width: 170px; }
+.b-qf-tag { left: 20px; top: 18px; width: 170px; }
+.b-sf-tag { left: 280px; top: 18px; width: 170px; }
+.b-final-tag { left: 540px; top: 18px; width: 170px; }
+.b-champion-tag { left: 760px; top: 18px; width: 150px; }
 
 .match-slot {
   position: absolute;
@@ -371,6 +373,7 @@ h3 {
   background:
     linear-gradient(90deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.04)),
     rgba(255, 255, 255, 0.02);
+  z-index: 2;
 }
 
 .match-slot::before {
@@ -409,15 +412,15 @@ h3 {
   justify-content: center;
 }
 
-.m-qf-1 { left: 20px; top: 70px; width: 170px; }
-.m-qf-2 { left: 20px; top: 130px; width: 170px; }
-.m-qf-3 { left: 20px; top: 190px; width: 170px; }
-.m-qf-4 { left: 20px; top: 250px; width: 170px; }
+.b-m-qf-1 { left: 20px; top: 70px; width: 170px; }
+.b-m-qf-2 { left: 20px; top: 130px; width: 170px; }
+.b-m-qf-3 { left: 20px; top: 190px; width: 170px; }
+.b-m-qf-4 { left: 20px; top: 250px; width: 170px; }
 
-.m-sf-1 { left: 290px; top: 100px; width: 170px; }
-.m-sf-2 { left: 290px; top: 220px; width: 170px; }
-.m-final { left: 560px; top: 160px; width: 170px; }
-.m-champion { left: 790px; top: 152px; width: 170px; height: 64px; }
+.b-m-sf-1 { left: 280px; top: 100px; width: 170px; }
+.b-m-sf-2 { left: 280px; top: 220px; width: 170px; }
+.b-m-final { left: 540px; top: 160px; width: 170px; }
+.b-m-champion { left: 760px; top: 150px; width: 150px; height: 68px; }
 
 .champ-slot {
   border-color: rgba(255, 192, 106, 0.5);
