@@ -322,14 +322,14 @@ h3 {
 
 .bracket-board {
   position: relative;
-  min-width: 820px;
+  min-width: 980px;
   height: 380px;
 }
 
 .bracket-lines {
   position: absolute;
   inset: 0;
-  width: 820px;
+  width: 980px;
   height: 380px;
   pointer-events: none;
 }
@@ -340,11 +340,6 @@ h3 {
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
-}
-
-.bracket-lines polyline.conn-loss {
-  stroke: rgba(233, 240, 255, 0.45);
-  stroke-dasharray: 4 4;
 }
 
 .round-tag {
@@ -362,12 +357,10 @@ h3 {
   text-transform: none;
 }
 
-.ubsf { left: 20px; top: 18px; width: 170px; }
-.ubf { left: 250px; top: 18px; width: 170px; }
-.gf { left: 680px; top: 18px; width: 120px; }
-
-.lbr1 { left: 250px; top: 210px; width: 170px; }
-.lbf { left: 480px; top: 200px; width: 170px; }
+.qf { left: 20px; top: 18px; width: 170px; }
+.sf { left: 290px; top: 18px; width: 170px; }
+.final { left: 560px; top: 18px; width: 170px; }
+.champion { left: 790px; top: 18px; width: 170px; }
 
 .match-slot {
   position: absolute;
@@ -416,12 +409,37 @@ h3 {
   justify-content: center;
 }
 
-.m-ubsf-1 { left: 20px; top: 70px; width: 170px; }
-.m-ubsf-2 { left: 20px; top: 150px; width: 170px; }
-.m-ubf { left: 250px; top: 110px; width: 170px; }
-.m-lbr1 { left: 250px; top: 250px; width: 170px; }
-.m-lbf { left: 480px; top: 230px; width: 170px; }
-.m-gf { left: 680px; top: 230px; width: 120px; }
+.m-qf-1 { left: 20px; top: 70px; width: 170px; }
+.m-qf-2 { left: 20px; top: 130px; width: 170px; }
+.m-qf-3 { left: 20px; top: 190px; width: 170px; }
+.m-qf-4 { left: 20px; top: 250px; width: 170px; }
+
+.m-sf-1 { left: 290px; top: 100px; width: 170px; }
+.m-sf-2 { left: 290px; top: 220px; width: 170px; }
+.m-final { left: 560px; top: 160px; width: 170px; }
+.m-champion { left: 790px; top: 152px; width: 170px; height: 64px; }
+
+.champ-slot {
+  border-color: rgba(255, 192, 106, 0.5);
+  background:
+    linear-gradient(90deg, rgba(255, 192, 106, 0.12), rgba(255, 255, 255, 0.03)),
+    rgba(255, 255, 255, 0.02);
+}
+
+.champ-slot::before {
+  display: none;
+}
+
+.champ-trophy {
+  position: absolute;
+  left: 50%;
+  top: -30px;
+  transform: translateX(-50%);
+  font-size: 1.55rem;
+  line-height: 1;
+  filter: drop-shadow(0 0 14px rgba(255, 192, 106, 0.55));
+}
+
 
 .meta {
   margin-top: 10px;
