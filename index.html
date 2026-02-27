@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=20260227-2" />
+  <link rel="stylesheet" href="./styles.css?v=20260227-3" />
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -135,6 +135,10 @@
           </div>
 
           <p class="meta" id="bracket-updated">Bracket data source connected.</p>
+          <div class="battlecup-actions">
+            <button type="button" class="btn btn-primary primary" id="open-register-modal">Register Here</button>
+            <p class="meta">Registration opens in a secure in-page form window.</p>
+          </div>
         </article>
 
         <article class="card card-highlight">
@@ -206,6 +210,28 @@
     </section>
   </main>
 
+  <div class="form-modal" id="register-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="register-modal-title">
+    <div class="form-modal-backdrop" data-close-register-modal></div>
+    <div class="form-modal-panel">
+      <div class="form-modal-head">
+        <h3 id="register-modal-title">Weekly Battlecup Registration</h3>
+        <button type="button" class="form-close" aria-label="Close registration form" data-close-register-modal>&times;</button>
+      </div>
+      <div class="form-modal-body">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfUpli0euLp6vxCQ_rzh_4kLOp87UhB6nItZ7PkRqf0bqDARw/viewform?embedded=true"
+          title="Weekly Battlecup Registration Form"
+          loading="lazy"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+        >
+          Loading...
+        </iframe>
+      </div>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <div class="footer-left">
       <p>Copyright <span id="year"></span> Dekaron Reloaded</p>
@@ -224,6 +250,6 @@
     </nav>
   </footer>
 
-  <script src="./main.js?v=20260227-2"></script>
+  <script src="./main.js?v=20260227-3"></script>
 </body>
 </html>

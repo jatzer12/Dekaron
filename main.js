@@ -4,9 +4,40 @@ const navLinks = document.querySelectorAll('.site-nav a');
 const revealEls = document.querySelectorAll('.reveal');
 const yearEl = document.getElementById('year');
 const bracketUpdatedEl = document.getElementById('bracket-updated');
+const openRegisterModalBtn = document.getElementById('open-register-modal');
+const registerModal = document.getElementById('register-modal');
+const closeRegisterModalEls = document.querySelectorAll('[data-close-register-modal]');
 
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
+}
+
+const openRegisterModal = () => {
+  if (!registerModal) return;
+  registerModal.classList.add('is-open');
+  registerModal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+};
+
+const closeRegisterModal = () => {
+  if (!registerModal) return;
+  registerModal.classList.remove('is-open');
+  registerModal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+};
+
+if (openRegisterModalBtn && registerModal) {
+  openRegisterModalBtn.addEventListener('click', openRegisterModal);
+
+  closeRegisterModalEls.forEach((el) => {
+    el.addEventListener('click', closeRegisterModal);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && registerModal.classList.contains('is-open')) {
+      closeRegisterModal();
+    }
+  });
 }
 
 if (menuButton && nav) {
