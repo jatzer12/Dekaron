@@ -1,252 +1,229 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/x-icon" href="/assets/favcon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dekaron Reloaded</title>
-  <link rel="stylesheet" href="./styles.css">
+  <title>Dekaron Reloaded | Competitive Private Server</title>
+  <meta name="description" content="Dekaron Reloaded is a fast, competitive private server with weekly cash events, active community, and quick onboarding." />
+  <meta property="og:title" content="Dekaron Reloaded" />
+  <meta property="og:description" content="Fast progression, cash prize events, and weekly tournament play." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./assets/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/x-icon" href="./assets/favcon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
-
 <body>
-  <header class="header">
-    <a class="brand" href="./">
-      <img class="brand-logo" src="./assets/logo.png" alt="Dekaron Reloaded Logo">
-      <span class="brand-text">DEKARON RELOADED</span>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Dekaron Reloaded homepage">
+        <img class="brand-logo" src="./assets/logo.png" alt="Dekaron Reloaded logo" width="160" height="56" decoding="async" />
+        <span class="brand-text">Dekaron Reloaded</span>
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="#rates">Server Info</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#discord">Discord</a>
+        <a href="#download">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero reveal">
+      <div class="hero-copy">
+        <p class="eyebrow">Competitive Private Server</p>
+        <h1>Built for Fast Progression and Real PvP Pressure.</h1>
+        <p class="lead">
+          Start at max level, enter weekly cash-prize tournaments, and play with an active community that takes competition seriously.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#download">Download Client</a>
+          <a class="btn btn-ghost" href="https://discord.gg/JSeXP3VAmw" target="_blank" rel="noopener noreferrer">Join Discord</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel reveal">
+        <h2>Live Snapshot</h2>
+        <ul class="stats">
+          <li><span>Max Level</span><strong>200</strong></li>
+          <li><span>Starter Gear</span><strong>Lv 130 +9</strong></li>
+          <li><span>Server Style</span><strong>Semi PvP</strong></li>
+          <li><span>Weekly Battlecup</span><strong>Saturday 6:00 PM</strong></li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="rates" class="section reveal">
+      <div class="section-head">
+        <p class="eyebrow">Server Info</p>
+        <h2>Everything You Need Before You Install</h2>
+      </div>
+
+      <div class="cards cards-3">
+        <article class="card">
+          <h3>Max Level Start</h3>
+          <p class="value">Level 200</p>
+          <p>Every new character starts at cap so you can jump directly into build optimization and PvP.</p>
+        </article>
+
+        <article class="card">
+          <h3>Starter Package</h3>
+          <p class="value">Lv 130 +9</p>
+          <p>Essential starter equipment is granted at creation for smoother onboarding and less downtime.</p>
+        </article>
+
+        <article class="card">
+          <h3>Progression Style</h3>
+          <p class="value">Semi PvP</p>
+          <p>Balanced economy and grind pacing with regular competitive pressure from events and ranked play.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="highlights" class="section reveal">
+      <div class="section-head">
+        <p class="eyebrow">Highlights</p>
+        <h2>Weekly Tournament Structure + Surprise Event Rotation</h2>
+      </div>
+
+      <div class="cards cards-2">
+        <article class="card card-highlight">
+          <div class="chip">Weekly Tournament</div>
+          <h3>Battle Cup Cash Prize Bracket</h3>
+          <p>Team-vs-team bracket every Saturday at 6:00 PM. Bring your full roster and expect stacked finals.</p>
+
+          <div class="bracket-pro" role="img" aria-label="Battle Cup double-elimination bracket board">
+            <div class="bracket-board">
+              <svg class="bracket-lines" viewBox="0 0 820 380" preserveAspectRatio="none" aria-hidden="true">
+                <polyline points="190,92 220,92 220,132 250,132" />
+                <polyline points="190,172 220,172 220,132 250,132" />
+
+                <polyline class="conn-loss" points="190,92 210,92 210,272 250,272" />
+                <polyline class="conn-loss" points="190,172 210,172 210,272 250,272" />
+
+                <polyline points="420,132 450,132 450,254 480,254" />
+                <polyline points="420,272 450,272 450,254 480,254" />
+
+                <polyline points="650,254 680,254" />
+              </svg>
+
+              <div class="round-tag ubsf">Upper Bracket Semifinals</div>
+              <div class="round-tag ubf">Upper Bracket Final</div>
+              <div class="round-tag gf">Grand Final</div>
+
+              <div class="round-tag lbr1">Lower Bracket Round 1</div>
+              <div class="round-tag lbf">Lower Bracket Final</div>
+
+              <div class="match-slot m-ubsf-1"><span class="seed">1</span></div>
+              <div class="match-slot m-ubsf-2"><span class="seed">1</span></div>
+              <div class="match-slot m-ubf"><span class="seed">1</span></div>
+              <div class="match-slot m-lbr1"><span class="seed">1</span></div>
+              <div class="match-slot m-lbf"><span class="seed">1</span></div>
+              <div class="match-slot m-gf final-slot"><span class="seed">1</span></div>
+            </div>
+          </div>
+
+          <p class="meta" id="bracket-updated">Bracket data source connected.</p>
+        </article>
+
+        <article class="card card-highlight">
+          <div class="chip chip-alt">Random Events</div>
+          <h3>Unannounced Midweek Cash Events</h3>
+          <p>Discord alerts trigger pop-up events across PvP, PvE races, and mini-game formats.</p>
+
+          <ul class="event-list">
+            <li><strong>Flash PvP Arena:</strong> Fast bracket or last-team-standing format.</li>
+            <li><strong>Boss Hunt:</strong> First party to clear gets prize allocation.</li>
+            <li><strong>Trivia and Hide &amp; Seek:</strong> Community-focused events with reward drops.</li>
+          </ul>
+
+          <a class="btn btn-ghost full" href="https://discord.gg/JSeXP3VAmw" target="_blank" rel="noopener noreferrer">Enable Event Alerts</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="discord" class="section reveal">
+      <div class="section-head">
+        <p class="eyebrow">Community</p>
+        <h2>Announcements, Support, Recruiting, and Event Calls</h2>
+      </div>
+
+      <div class="cards cards-2">
+        <article class="card">
+          <h3>Join the Main Hub</h3>
+          <p>Get installation support, patch notes, event schedules, and live moderator response in one place.</p>
+          <a class="btn btn-primary full" href="https://discord.gg/JSeXP3VAmw" target="_blank" rel="noopener noreferrer">Open Discord Invite</a>
+        </article>
+
+        <article class="card embed-card">
+          <iframe
+            title="Discord Widget"
+            class="discord-iframe"
+            src="https://discord.com/widget?id=1470798141011001505&theme=dark"
+            width="100%"
+            height="420"
+            loading="lazy"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+          ></iframe>
+        </article>
+      </div>
+    </section>
+
+    <section id="download" class="section reveal">
+      <div class="section-head">
+        <p class="eyebrow">Download</p>
+        <h2>Install Fast and Get Into Matches</h2>
+      </div>
+
+      <div class="download-panel">
+        <div>
+          <h3>Dekaron Reloaded Client</h3>
+          <p>Use the launcher version for simpler updates and patch consistency.</p>
+          <ol class="steps">
+            <li>Download the client package.</li>
+            <li>Extract to a clean folder.</li>
+            <li>Run launcher as Administrator.</li>
+          </ol>
+        </div>
+
+        <div class="download-actions">
+          <a class="btn btn-primary" href="https://drive.google.com/" target="_blank" rel="noopener noreferrer">Download via Google Drive</a>
+          <a class="btn btn-primary" href="https://www.mediafire.com/" target="_blank" rel="noopener noreferrer">Download via MediaFire</a>
+          <a class="btn btn-ghost" href="https://discord.gg/JSeXP3VAmw" target="_blank" rel="noopener noreferrer">Get Setup Help</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-left">
+      <p>Copyright <span id="year"></span> Dekaron Reloaded</p>
+      <p class="meta">Competitive community server</p>
+    </div>
+
+    <a class="social" href="https://www.facebook.com/gaming/reloaded808" target="_blank" rel="noopener noreferrer" aria-label="Dekaron Reloaded Facebook page">
+      <img src="./assets/facebook-icon.png" alt="Facebook" width="22" height="22" loading="lazy" decoding="async" />
     </a>
 
-    <nav class="nav">
+    <nav class="footer-nav" aria-label="Footer navigation">
       <a href="#rates">Server Info</a>
       <a href="#highlights">Highlights</a>
       <a href="#discord">Discord</a>
       <a href="#download">Download</a>
     </nav>
-  </header>
+  </footer>
 
-  <main class="wrap">
-    <section class="hero">
-      <h1>Dekaron Reloaded</h1>
-      <p>Simple. Fast. Competitive. Join the community and start playing in minutes.</p>
-
-      <div class="hero-actions">
-        <a class="btn primary" href="#download">Download</a>
-        <a class="btn ghost" href="#discord">Join Discord</a>
-      </div>
-    </section>
-
-    <!-- Server Info -->
-    <section id="rates" class="section">
-      <div class="section-head">
-        <h2>Server Info</h2>
-        <p>Simple server details before you download and jump in.</p>
-      </div>
-
-      <div class="cards">
-        <div class="card">
-          <div class="card-title">Max Level</div>
-          <div class="card-value">200</div>
-          <div class="card-sub">New characters start at max level automatically</div>
-        </div>
-
-        <div class="card">
-          <div class="card-title">Starter Gear</div>
-          <div class="card-value">Lv 130 +9</div>
-          <div class="card-sub">Starter items included when you create your character</div>
-        </div>
-
-        <div class="card">
-          <div class="card-title">Server Style</div>
-          <div class="card-value">Semi PvP</div>
-          <div class="card-sub">Semi PvP, semi grind — balanced progression & action</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Highlights -->
-    <section id="highlights" class="section">
-      <div class="section-head">
-        <h2>Highlights</h2>
-        <p>Cash prize events and weekly competitive play.</p>
-      </div>
-
-      <div class="highlights">
-        <!-- Weekly Battle Cup -->
-        <div class="card card-pad">
-          <div class="badge">Weekly</div>
-          <h3 class="highlight-title">Battle Cup — Cash Prizes</h3>
-          <p class="muted">
-            Every <strong>Saturday</strong> at <strong>6:00 PM</strong>. Team vs Team tournament with bracket format.
-          </p>
-
-          <div class="bracket">
-            <div class="bracket-head">
-              <span class="bracket-title">Bracket Preview</span>
-            </div>
-
-            <div class="bracket-grid bracket-6">
-              <!-- PLAYOFF -->
-              <div class="round">
-                <div class="round-title">Playoff</div>
-                <div class="match">Team A</div>
-                <div class="match">Team B</div>
-                <div class="match">Team C</div>
-                <div class="match">Team D</div>
-              </div>
-
-              <!-- LOWER BRACKET -->
-              <div class="round">
-                <div class="round-title">Lower Bracket</div>
-                <div class="match">Loser (A vs B)</div>
-                <div class="match">Loser (C vs D)</div>
-              </div>
-
-              <!-- WINNER BRACKET -->
-              <div class="round">
-                <div class="round-title">Winner Bracket</div>
-                <div class="match win">Winner (A vs B)</div>
-                <div class="match win">Winner (C vs D)</div>
-              </div>
-
-              <!-- SEMI FINALS -->
-              <div class="round">
-                <div class="round-title">Semi Finals</div>
-                <div class="match win">Winner (Lower Bracket)</div>
-                <div class="match">Loser (Winner Bracket)</div>
-              </div>
-
-              <!-- FINALS -->
-              <div class="round">
-                <div class="round-title">Finals</div>
-                <div class="match champ">Winner (Winner Bracket)</div>
-                <div class="match win">Winner (Semi Finals)</div>
-              </div>
-
-              <!-- CHAMPION -->
-              <div class="round">
-                <div class="round-title">Champion</div>
-                <div class="match champ">Grand Champion</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Random Events -->
-        <div class="card card-pad">
-          <div class="badge alt">Random</div>
-          <h3 class="highlight-title">Random Events — Cash Prizes</h3>
-
-          <p class="muted">
-            Surprise events held at <strong>random times</strong> during the week — keep an eye on Discord announcements.
-          </p>
-
-          <div class="info-row">
-            <div class="info-pill">Schedule: Random</div>
-            <div class="info-pill">Types: PvP / PvE / Mini-games</div>
-            <div class="info-pill">Prize: Cash</div>
-          </div>
-
-          <div class="event-list">
-            <div class="event-item">
-              <span class="event-dot"></span>
-              <div>
-                <div class="event-title">Flash PvP Arena</div>
-                <div class="muted small">Quick brackets or last-team-standing</div>
-              </div>
-            </div>
-
-            <div class="event-item">
-              <span class="event-dot"></span>
-              <div>
-                <div class="event-title">Boss Hunt</div>
-                <div class="muted small">First party to clear wins</div>
-              </div>
-            </div>
-
-            <div class="event-item">
-              <span class="event-dot"></span>
-              <div>
-                <div class="event-title">Hide &amp; Seek / Trivia</div>
-                <div class="muted small">Fun community events with prizes</div>
-              </div>
-            </div>
-          </div>
-
-          <a class="btn ghost full" href="https://discord.gg/JSeXP3VAmw" target="_blank" rel="noreferrer">
-            Get notified on Discord
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Discord -->
-    <section id="discord" class="section">
-      <div class="section-head">
-        <h2>Discord</h2>
-        <p>Announcements, support, events, and guild recruiting.</p>
-      </div>
-
-      <div class="grid-2">
-        <div class="card card-pad">
-          <h3 class="mini-title">Join the Community</h3>
-          <p class="muted">Join Discord for announcements, support, events, and updates.</p>
-
-          <a class="btn primary full" href="https://discord.gg/JSeXP3VAmw" target="_blank" rel="noreferrer">
-            Open Discord Invite
-          </a>
-        </div>
-
-        <div class="card discord-card">
-          <iframe
-            class="discord-iframe"
-            src="https://discord.com/widget?id=1470798141011001505&theme=dark"
-            width="100%"
-            height="420"
-            allowtransparency="true"
-            frameborder="0"
-            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-            title="Discord Widget"
-          ></iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- Download -->
-    <section id="download" class="section">
-      <div class="section-head">
-        <h2>Download</h2>
-        <p>Get the client and start playing.</p>
-      </div>
-
-      <div class="download">
-        <div class="download-left">
-          <div class="download-title">Dekaron Reloaded Client</div>
-          <div class="muted">Launcher recommended for easier updates.</div>
-        </div>
-
-        <a class="btn primary" href="https://example.com/your-client-download.zip" target="_blank" rel="noreferrer">
-          Download Client
-        </a>
-      </div>
-    </section>
-
-<footer class="footer">
-  <div>© <span id="year"></span> Dekaron Reloaded</div>
-
-  <a class="footer-social" href="https://www.facebook.com/gaming/reloaded808" target="_blank" rel="noreferrer">
-    <img src="assets/facebook-icon.png" alt="Facebook">
-  </a>
-
-  <div class="footer-links">
-    <a href="#rates">Server Info</a>
-    <a href="#highlights">Highlights</a>
-    <a href="#discord">Discord</a>
-    <a href="#download">Download</a>
-  </div>
-</footer>
-  </main>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="./main.js"></script>
 </body>
 </html>
