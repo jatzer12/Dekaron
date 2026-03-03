@@ -317,15 +317,19 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 12px;
   background: linear-gradient(180deg, #03070f, #040912);
-  overflow: hidden;
-  scrollbar-gutter: stable;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-gutter: stable both-edges;
   -webkit-overflow-scrolling: touch;
 }
 
 .bracket-iframe {
   display: block;
-  width: 100%;
-  max-width: 100%;
+  width: 1200px;
+  min-width: 1200px;
+  max-width: none;
   border: 0;
 }
 
