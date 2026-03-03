@@ -311,6 +311,24 @@ h3 {
   background: rgba(70, 140, 255, 0.12);
 }
 
+.bracket-embed {
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: linear-gradient(180deg, #03070f, #040912);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-gutter: stable;
+  -webkit-overflow-scrolling: touch;
+}
+
+.bracket-iframe {
+  display: block;
+  width: 1200px;
+  max-width: none;
+  border: 0;
+}
+
 .bracket-pro {
   margin-top: 14px;
   border: 1px solid var(--line);
