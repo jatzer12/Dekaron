@@ -292,6 +292,10 @@ h3 {
   margin-top: 10px;
 }
 
+.card-highlight {
+  overflow: hidden;
+}
+
 .chip {
   display: inline-flex;
   align-items: center;
@@ -317,8 +321,11 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 12px;
   background: linear-gradient(180deg, #03070f, #040912);
+  position: relative;
+  isolation: isolate;
   width: 100%;
   max-width: 100%;
+  min-width: 0;
   overflow-x: auto;
   overflow-y: hidden;
   scrollbar-gutter: stable both-edges;
